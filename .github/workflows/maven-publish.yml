@@ -9,10 +9,6 @@ on:
 jobs:
   cicd:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      repository-projects: write
 
     steps:
       - name: checkout
@@ -25,10 +21,10 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.WRKFLW_TOKEN }}
 
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: java
+      #- name: Initialize CodeQL
+        #uses: github/codeql-action/init@v2
+        #with:
+          #languages: java
 
       #- name: Autobuild
         #uses: github/codeql-action/autobuild@v2
