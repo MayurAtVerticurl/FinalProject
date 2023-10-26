@@ -8,7 +8,7 @@ WORKDIR /app
 
 # Copy the jar file into our app
 
-COPY ./target/spring-0.0.1-SNAPSHOT.jar /app
+COPY ./target/project-0.0.1-SNAPSHOT.war /app
 
 
 # Exposing port 8080
